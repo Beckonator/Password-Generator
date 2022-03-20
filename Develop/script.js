@@ -44,7 +44,7 @@ function getPassword() {
       promptSymbols === "YES" ||
       promptSymbols === "Yes"
     ) {
-      console.log((includeSymbols = symbols));
+      let includeSymbols = symbols;
     } else {
       window.alert("Symbols not used");
     }
@@ -64,10 +64,10 @@ function getPassword() {
 }
 passwordValue = "";
 
-// for (let i = 0; i < passwordLength; i++) {
-//   let password = Math.floor(Math.random() * characters.length);
-//   passwordValue += characters.substring(password, password + 1);
-// }
+for (let i = 0; i < passwordLength; i++) {
+  let password = Math.floor(Math.random() * numbers.length);
+  passwordValue += numbers.substring(password, password + 1);
+}
 
 passwordText.value = passwordValue;
 
